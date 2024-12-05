@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const playersData = [
+        { name: "Alisson", position: "GK" },
+        { name: "Robertson", position: "LB" },
+        { name: "Van Dijk", position: "CB" },
+        { name: "Konate", position: "CB" },
+        { name: "Alexander-Arnold", position: "RB" },
+        { name: "Mac Allister", position: "CM" },
+        { name: "Szoboszlai", position: "CM" },
+        { name: "Jones", position: "CM" },
+        { name: "Salah", position: "RW" },
+        { name: "Núñez", position: "ST" }
+    ];
+
+        const newplayer = (n , p) =>{
+        const newdata = {
+            name :n,
+            position: p 
+         }
+
+         playersData.forEach(data => {
+           
+            if(data.name === newdata.name){
+            console.log('ce joueur déjat exist dans la list');
+            return;
+         }else{
+            playersData.push(newdata);
+            console.log('le joueur est ajoutée');
+            return;
+         }  
+         });
+  
+         console.table(playersData);    
+         }
+
+         newplayer('Hello', 'chama');
+    
+
+
+
+
+    </script>
+
+
+
+     
+
+</body>
+</html>
